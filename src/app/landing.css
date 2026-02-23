@@ -1,0 +1,36 @@
+/* CVcraft Landing - workintech tarzı palet */
+.landing {
+  --lp-bg: #0f0f1a;
+  --lp-card: #1a1a2e;
+  --lp-primary: #6366f1;
+  --lp-secondary: #06b6d4;
+  --lp-gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  --lp-text: #f1f5f9;
+  --lp-muted: #94a3b8;
+}
+.landing-bg { background-color: var(--lp-bg); }
+.landing-card { background-color: var(--lp-card); }
+.landing-gradient-text {
+  background: var(--lp-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.landing-btn-gradient {
+  background: var(--lp-gradient);
+  color: #fff;
+}
+.landing-btn-gradient:hover { filter: brightness(1.1); }
+
+/* Hero CV kartı 3D tilt efekti */
+.cv-tilt {
+  perspective: 1600px;
+}
+.cv-tilt-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.cv-tilt:hover .cv-tilt-inner {
+  transform: rotateX(8deg) rotateY(-8deg) translateY(-4px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.7);
+}
