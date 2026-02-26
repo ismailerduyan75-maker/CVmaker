@@ -482,22 +482,82 @@ export default function LandingPage() {
             CVcraft
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--lp-muted)]">
-            <Link href="#ozellikler" className="hover:text-white transition">Özellikler</Link>
-            <Link href="#fiyatlar" className="hover:text-white transition">Fiyatlar</Link>
-            <Link href="/fiyatlandirma" className="hover:text-white transition">Fiyatlandırma</Link>
-            <Link href="/login" className="hover:text-white transition">Giriş</Link>
-            <Link href="/register" className="hover:text-white transition">Kayıt</Link>
+            <Link href="#ozellikler" className="hover:text-white transition">
+              Özellikler
+            </Link>
+            <Link href="#fiyatlar" className="hover:text-white transition">
+              Fiyatlar
+            </Link>
+            <Link href="/fiyatlandirma" className="hover:text-white transition">
+              Fiyatlandırma
+            </Link>
+            <Link href="/hakkimizda" className="hover:text-white transition">
+              Hakkımızda
+            </Link>
+            <Link href="/gizlilik-politikasi" className="hover:text-white transition">
+              Gizlilik Politikası
+            </Link>
+            <Link href="/kullanim-sartlari" className="hover:text-white transition">
+              Kullanım Şartları
+            </Link>
+            <Link href="/mesafeli-satis-sozlesmesi" className="hover:text-white transition">
+              Mesafeli Satış Sözleşmesi
+            </Link>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="text-[var(--lp-muted)] hover:text-white transition" aria-label="Twitter">𝕏</a>
-            <a href="#" className="text-[var(--lp-muted)] hover:text-white transition" aria-label="LinkedIn">in</a>
-            <a href="#" className="text-[var(--lp-muted)] hover:text-white transition" aria-label="Instagram">📷</a>
+            <a href="#" className="text-[var(--lp-muted)] hover:text-white transition" aria-label="Twitter">
+              𝕏
+            </a>
+            <a href="#" className="text-[var(--lp-muted)] hover:text-white transition" aria-label="LinkedIn">
+              in
+            </a>
+            <a href="#" className="text-[var(--lp-muted)] hover:text-white transition" aria-label="Instagram">
+              📷
+            </a>
           </div>
         </div>
-        <p className="max-w-6xl mx-auto mt-8 text-center text-xs text-[var(--lp-muted)]">
-          © {new Date().getFullYear()} CVcraft. Tüm hakları saklıdır.
-        </p>
+
+        <div className="max-w-6xl mx-auto mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[var(--lp-muted)] text-center sm:text-left">
+            © {new Date().getFullYear()} CVcraft / İsmail Erduyan. Tüm hakları saklıdır.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 text-xs text-[var(--lp-muted)]">
+            <div className="flex items-center gap-2">
+              <span className="text-[var(--lp-muted)]">Ödemeler:</span>
+              <div className="flex items-center gap-1">
+                <VisaLogo />
+                <MastercardLogo />
+              </div>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[var(--lp-muted)] text-[11px]">
+                iyzico ile güvenli ödeme
+              </span>
+            </div>
+          </div>
+        </div>
       </footer>
+    </div>
+  );
+}
+
+function VisaLogo() {
+  return (
+    <div className="h-6 w-10 rounded bg-white flex items-center justify-center border border-white/20">
+      <span className="text-[10px] font-semibold tracking-wide text-[#1a4fa3]">
+        VISA
+      </span>
+    </div>
+  );
+}
+
+function MastercardLogo() {
+  return (
+    <div className="h-6 w-10 rounded bg-white flex items-center justify-center border border-white/20">
+      <svg width="24" height="14" viewBox="0 0 24 14" aria-hidden="true">
+        <circle cx="9" cy="7" r="5" fill="#EB001B" />
+        <circle cx="15" cy="7" r="5" fill="#F79E1B" fillOpacity="0.9" />
+      </svg>
     </div>
   );
 }
