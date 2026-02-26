@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { Suspense, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
@@ -234,6 +234,14 @@ function TemplateThumbnail({ templateId }: { templateId: CVTemplateId }) {
 }
 
 export default function OlusturPage() {
+  return (
+    <Suspense fallback={<div>Yükleniyor...</div>}>
+      <OlusturPageInner />
+    </Suspense>
+  );
+}
+
+function OlusturPageInner() {
   const searchParams = useSearchParams();
   const editId = searchParams.get("edit") ?? null;
   const { user, authLoading, isPaidPlan } = useAuth();

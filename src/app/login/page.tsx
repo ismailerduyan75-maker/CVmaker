@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
@@ -10,6 +10,14 @@ import { Button } from "@/components/ui/Button";
 import { BrandLogo } from "@/components/BrandLogo";
 
 export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Yükleniyor...</div>}>
+      <LoginPageInner />
+    </Suspense>
+  );
+}
+
+function LoginPageInner() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);

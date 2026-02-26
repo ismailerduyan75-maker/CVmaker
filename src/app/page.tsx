@@ -164,7 +164,7 @@ export default function LandingPage() {
                 <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 px-4 py-3 text-white flex items-center justify-between gap-3">
                   <div>
                     <p className="text-[10px] tracking-wide uppercase opacity-80">Özgeçmiş</p>
-                    <h3 className="text-lg font-semibold leading-tight">Dilek Doğan</h3>
+                    <h3 className="text-lg font-semibold leading-tight">Ali Yılmaz</h3>
                     <p className="text-[11px] opacity-90">Senior Software Engineer</p>
                   </div>
                   <div className="flex flex-col items-end gap-1 text-[11px]">
@@ -174,7 +174,7 @@ export default function LandingPage() {
                       <span>📍</span>
                       <span>🔗</span>
                     </div>
-                    <p className="text-[10px] opacity-90">dilek.dogan@example.com</p>
+                    <p className="text-[10px] opacity-90">ali.yilmaz@example.com</p>
                   </div>
                 </div>
 
@@ -186,10 +186,10 @@ export default function LandingPage() {
                       <h4 className="text-[9px] font-semibold uppercase tracking-wide text-cyan-300 border-b border-cyan-400/40 pb-0.5">
                         İletişim
                       </h4>
-                      <p className="mt-1">📧 dilek.dogan@example.com</p>
+                      <p className="mt-1">📧 ali.yilmaz@example.com</p>
                       <p>📱 0532 XXX XX XX</p>
                       <p>📍 İstanbul</p>
-                      <p>🔗 linkedin.com/in/dilekdogan</p>
+                      <p>🔗 linkedin.com/in/aliyilmaz</p>
                     </div>
 
                     <div>
@@ -272,7 +272,7 @@ export default function LandingPage() {
                         Eğitim
                       </h4>
                       <p className="mt-1 text-[10px] font-semibold text-slate-900">
-                        Mekatronik Mühendisliği · XYZ Üniversitesi
+                        Makine Mühendisliği · XYZ Üniversitesi
                       </p>
                       <p className="text-[9px] text-slate-500">2014 – 2018 · 3.4 GPA</p>
                     </div>
